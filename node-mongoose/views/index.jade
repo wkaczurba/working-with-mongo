@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  form(action="/newVehicle")
+    input(type="text", placeholder="Vehicle name...", name="name")
+    input(type="text", placeholder="Vehicle color...", name="color")
+    input(type="submit")
+  ul
+    for vehicle in vehicles
+      li= vehicle.name + " wheels:" + vehicle.wheels
